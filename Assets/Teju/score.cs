@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
 public class score : MonoBehaviour
 {
   public int scoreValue = 0;
@@ -10,7 +7,7 @@ public class score : MonoBehaviour
 
   void Start()
   {
-    UpdateScoreUI();
+    scoreText.text = "Score: 0";
   }
 
   void OnTriggerEnter(Collider other)
@@ -19,12 +16,8 @@ public class score : MonoBehaviour
     {
       Destroy(other.gameObject);
       scoreValue += 10;
-      UpdateScoreUI();
+      scoreText.text = "Score: " + scoreValue;
     }
   }
 
-  void UpdateScoreUI()
-  {
-    scoreText.text = "Score: " + scoreValue;
-  }
 }

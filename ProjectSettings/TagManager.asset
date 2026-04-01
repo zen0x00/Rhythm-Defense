@@ -10,6 +10,8 @@ TagManager:
   - Right Hand
   - Enemy
   - Garbage
+  - Trash
+  - Bomb
   layers:
   - Default
   - TransparentFX
